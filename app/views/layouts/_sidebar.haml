@@ -26,7 +26,7 @@
         .logo-element
           IN+
 
-      %li{:class => "#{is_active_controller('dashboards')}"}
+      %li{:class => "#{active_controller?('dashboards')}"}
         %a{:href => ""}
           %i.fa.fa-th-large
           %span.nav-label{"data-i18n" => "nav.dashboard"} Dashboards
