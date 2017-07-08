@@ -7,7 +7,7 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body{ id: "#{controller_name}-#{action_name}", class: 'fixed-sidebar pace-done' }
-    #wrapper
+    #wrapper{ data: flash_alert }
       = render 'layouts/sidebar'
       #page-wrapper.gray-bg
         = render 'layouts/navigation'

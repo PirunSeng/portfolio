@@ -89,10 +89,16 @@
               %a{:href => "notifications.html"}
                 %strong See All Alerts
                 %i.fa.fa-angle-right
-      %li
-        %a{:href => "login.html"}
-          %i.fa.fa-sign-out
-          Log out
+      - if user_signed_in?
+        %li
+          = link_to destroy_user_session_path, method: :delete do
+            %i.fa.fa-sign-out
+            = t('log_out')
+      - else
+        %li
+          = link_to new_user_session_path do
+            %i.fa.fa-sign-in
+            = t('log_in')
       %li
         %a.right-sidebar-toggle
           %i.fa.fa-tasks
