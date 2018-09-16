@@ -4,8 +4,9 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Portfolio
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application'
+    = javascript_include_tag 'https://js.stripe.com/v2/', 'application'
     = csrf_meta_tags
+    = tag :meta, name: 'stripe-key', content: STRIPE_PUBLIC_KEY
   %body{ id: "#{controller_name}-#{action_name}", class: 'fixed-sidebar pace-done' }
     #wrapper{ data: flash_alert }
       = render 'layouts/sidebar'

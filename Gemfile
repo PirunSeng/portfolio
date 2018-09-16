@@ -16,6 +16,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'simple_form', '~> 3.5'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'uglifier', '>= 1.3.0'
+gem 'stripe', '~> 3.25'
 
 group :test do
   gem 'capybara', '~> 2.14', '>= 2.14.4'
